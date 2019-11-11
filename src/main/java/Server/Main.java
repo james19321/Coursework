@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+import Controllers.authorsController;
 import org.sqlite.SQLiteConfig;
 
 public class Main {
@@ -12,6 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         openDatabase("Library.db");
+        authorsController.listThings();
         closeDatabase();
     }
 
