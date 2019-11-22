@@ -11,8 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
         openDatabase("Library.db");
-        authorsController.listThings();
-        closeDatabase();
     }
 
     private static void openDatabase(String dbFile) {
