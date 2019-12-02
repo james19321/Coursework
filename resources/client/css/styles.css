@@ -3,6 +3,13 @@ h1{
   text-align: center;
 }
 
+body{
+  background-color: #ffe59e;
+}
+
+.logo{
+  background-color: white;
+}
 .dropbtn {
   background-color: grey;
   color: white;
