@@ -39,10 +39,8 @@ public class usersController {
                     ps2.setString(2, username);
                     ps2.executeUpdate();
 
-                    System.out.println(token);
                     return "{\"token\":" + token + "\"}";
                 } else {
-                    System.out.println("\n correct password: " + correctPassword + "\n password: " + password);
                     return "{\"error\": \"Incorrect password\"}";
                 }
             } else {
