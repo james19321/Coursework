@@ -7,6 +7,36 @@ body{
   background-color: #ffe59e;
 }
 
+a{
+    font-family: "Century Gothic",sans-serif;
+    color="green";
+    text-decoration: none;
+}
+
+li a{
+  display: block;
+  width: 20%;
+  background-color: #ba2f11;
+  padding:20px;
+  margin-bottom: 10px;
+}
+
+.header{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    background-color: #ba2f11;
+    border-radius: 20px;
+    border-color: #900C3F
+}
+
+.navBar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
 .logo{
   background-color: white;
 }
@@ -44,3 +74,9 @@ body{
 .dropdown:hover .dropdown-content {display:block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+#titleLogo{
+    max-width: 'auto';
+    max-height: 100%;
+    object-fit: cover;
+}
