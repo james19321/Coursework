@@ -16,7 +16,7 @@ public class loansController {
     public String listThings(){
         try{
             PreparedStatement ps1 = Main.db.prepareStatement("SELECT * FROM Loans WHERE token = ?");
-            ps1.setString(1, cookie);
+            ps1.setString(1, "cookie");
 
         }catch(Exception e){
             return "{\"error\": \""+e+"\"}";

@@ -4,43 +4,58 @@ h1{
 }
 
 body{
-  background-color: #ffe59e;
+  background-color: #cce6ff;
+  min-width: 1000px
 }
 
-.logo{
-  background-color: white;
-}
-.dropbtn {
-  background-color: grey;
-  color: white;
-  padding: 15px 5px;
-  font-size: 16px;
-  border: none;
+a{
+    font-family: "Century Gothic",sans-serif;
+    color: #121212;
+    text-decoration: none;
 }
 
-.dropdown{
-  position: relative;
-  display: inline-block;
+.header{
+  background-color: #828282;
+  border-color: #900C3F
+  margin-bottom: 10px;
+  border-radius: 20px;
+  height: 200px
+  width: 100%;
 }
 
-.dropdown-content{
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  z-index: 1;
+.titleLogoContainer{
+    display: inline-block;
+    height: 200px;
+    /* max-height: 100%; */
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.images{
+    float: right;
+    max-height: 100%;
+    object-fit: cover;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.options{
+  list-style-type: none;
+  text-align: center;
+  float: left;
+}
 
-.dropdown:hover .dropdown-content {display:block;}
+.options a{
+    display: block;
+    background-color: #828282;
+    padding: 20px;
+    margin-bottom: 10px;
+}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.options a:hover{
+    background-color: #ccccff;
+}
+#titleLogo{
+    max-height: 100%;
+}
+
+#charges{
+  float:right;
+  padding: 20px;
+}
