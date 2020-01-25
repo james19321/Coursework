@@ -5,13 +5,16 @@ h1{
 
 body{
   background-color: #cce6ff;
-  min-width: 1000px
+  min-width: 1200px;
 }
 
 a{
     font-family: "Century Gothic",sans-serif;
     color: #121212;
     text-decoration: none;
+}
+
+input [type=text]{
 }
 
 .header{
@@ -48,11 +51,23 @@ a{
     margin-bottom: 10px;
 }
 
+.loginCredentials{
+    padding: 10px;
+    margin-left: 20px;
+    width:400px;
+}
+
 .options a:hover{
     background-color: #ccccff;
 }
 #titleLogo{
     max-height: 100%;
+    alt: bookLogo;
+}
+
+#libraryImage{
+    max-height: 100%;
+    alt: libraryImage;
 }
 
 #charges{
