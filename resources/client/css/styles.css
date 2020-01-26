@@ -29,7 +29,6 @@ input [type=text]{
 .titleLogoContainer{
     display: inline-block;
     height: 200px;
-    /* max-height: 100%; */
 }
 
 .images{
@@ -42,6 +41,7 @@ input [type=text]{
   list-style-type: none;
   text-align: center;
   float: left;
+  margin-right: 20px;
 }
 
 .options a{
@@ -55,6 +55,7 @@ input [type=text]{
     padding: 10px;
     margin-left: 20px;
     width:400px;
+    float:right;
 }
 
 .options a:hover{
@@ -62,12 +63,10 @@ input [type=text]{
 }
 #titleLogo{
     max-height: 100%;
-    alt: bookLogo;
 }
 
 #libraryImage{
     max-height: 100%;
-    alt: libraryImage;
 }
 
 #charges{

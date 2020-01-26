@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <!-- head tag with links to supporting code -->
     <head>
         <title></title>
@@ -14,29 +14,33 @@
 
         <!-- header code with website logo and login status etc. -->
         <div class="header">
-            <a href="index2.html"><img id="titleLogo" src="img/libraryLogo.png"></a>
+            <div class="titleLogoContainer">
+                <a href="index2.html"><img id="titleLogo" src="img/libraryLogo.png" alt="titleLogo"></a>
+            </div>
+
+            <div class="loginCredentials">
+                <form>
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username"><br>
+                    <label for="password">Password:<br></label>
+                    <input type="text" name="password" id="password"><br>
+                    <input type="button" name="login" value="Login">
+                </form>
+            </div>
         </div>
         <!--  -->
 
         <!-- Navigation div -->
         <div class="topOfPage">
+
             <div class="options">
                 <br><a href="login.html">Login</a>
                 <br><a href="search.html">Search for Books</a>
                 <br><a href="loans.html">View Loans</a>
             </div>
 
-            <div class="loginCredentials">
-                <form>
-                    Username:<br>
-                    <input type="text" name="username"><br>
-                    Password:<br>
-                    <input type="text" name="password"><br>
-                </form>
-            </div>
-
             <div class="images">
-                <img alt="fgh" id="libraryImage" src="img/library.jpg">
+                <img alt="libraryImage" id="libraryImage" src="img/library.jpg">
             </div>
         </div>
         <!--  -->
