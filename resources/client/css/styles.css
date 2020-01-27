@@ -5,7 +5,7 @@ h1{
 
 body{
   background-color: #cce6ff;
-  min-width: 1200px;
+  min-width: 1600px;
 }
 
 a{
@@ -27,8 +27,11 @@ input [type=text]{
 }
 
 .titleLogoContainer{
-    display: inline-block;
     height: 200px;
+    float: left;
+    border-right-color: #4b4b4b;
+    border-right-width: thin;
+    border-right-style: solid;
 }
 
 .images{
@@ -54,8 +57,12 @@ input [type=text]{
 .loginCredentials{
     padding: 10px;
     margin-left: 20px;
-    width:400px;
     float:right;
+}
+
+.websiteName{
+    float: left;
+    height: 100%;
 }
 
 .options a:hover{
@@ -72,4 +79,7 @@ input [type=text]{
 #charges{
   float:right;
   padding: 20px;
+}
+
+#websiteName{
 }
