@@ -1,6 +1,7 @@
 function pageLoad(token){
+    checkCookie()
     if(token==null){
-        document.getElementById('loginStatus').innerHTML;
+        document.getElementById('loginStatus').innerHTML = loginStatus;
     }
 }
 
