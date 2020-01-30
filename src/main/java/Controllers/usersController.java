@@ -15,7 +15,7 @@ import java.util.UUID;
 @Path("users/")
 public class usersController {
 
-
+//login api
     @POST
     @Path("login")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
@@ -27,10 +27,11 @@ public class usersController {
             ps1.setString(1, username);
             ResultSet loginResults = ps1.executeQuery();
 
+            //checks if user exists
             if (loginResults.next()) {
 
                 String correctPassword = loginResults.getString(1);
-
+                //checks if password sent by the HTTP request is correct and generates a random token
                 if (password.equals(correctPassword)) {
                     String token = UUID.randomUUID().toString();
 

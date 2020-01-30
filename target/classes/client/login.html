@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <!-- head tag with links to supporting code -->
     <head>
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/login.js"></script>
     </head>
 
 
 
 <!-- body -->
-    <body>
+    <body onload="pageLoad()">
 
         <!-- header code with website logo and login status etc. -->
         <div class="header">
-            <a href="index2.html"><img id="titleLogo" src="img/libraryLogo.png"></a>
+            <div class="titleLogoContainer">
+                <a href="index2.html"><img id="titleLogo" src="img/libraryLogo.png" alt="titleLogo"></a>
+            </div>
+
+            <div class="websiteName">
+                <img src="img/websitename.PNG" id="websiteName" alt="Sixth Form College Library">
+            </div>
+
+            <div class="loginCredentials">
+                <div id="error"></div>
+                <form action="/" method="GET">
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username"><br>
+                    <label for="password">Password:<br></label>
+                    <input type="text" name="password" id="password"><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
         </div>
         <!--  -->
 
         <!-- Navigation div -->
+        <div class="topOfPage">
 
-        <div class="options">
-            <br><a href="login.html">Login</a>
-            <br><a href="search.html">Search for Books</a>
-            <br><a href="loans.html">View Loans</a>
+            <div class="options">
+                <br><a href="login.html">Login</a>
+                <br><a href="search.html">Search for Books</a>
+                <br><a href="loans.html">View Loans</a>
+            </div>
+
+            <div class="images">
+                <img alt="libraryImage" id="libraryImage" src="img/library.jpg">
+            </div>
         </div>
         <!--  -->
 
