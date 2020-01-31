@@ -44,7 +44,7 @@ function logout(event) {
         Cookies.remove("username");
         Cookies.remove("token");
 
-        window.location.href = '/client/index.html';
+        window.location.href = '/client/login.html';
 
     }
 });

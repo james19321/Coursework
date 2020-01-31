@@ -1,4 +1,12 @@
 function pageLoad(){
+  const username = Cookies.get("username");
+  if(typeof username == "string"){
+      document.getElementById("loginStatus").removeAttribute("hidden");
+  }else if(typeof username == "undefined"){
+    document.getElementById("loginStatus").setAttribute("hidden",true);
+  }
+
+
 }
 
 function getCookie(cname) {

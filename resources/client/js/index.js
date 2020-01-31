@@ -1,9 +1,10 @@
 function pageLoad(){
   const username = Cookies.get("username");
   if(typeof username == "string"){
-      document.getElementById("loginStatus").removeAttribute("hidden");
+      document.getElementById("logoutButton").removeAttribute("hidden");
+      document.getElementById("loginMessage").setAttribute("hidden", true);
   }else if(typeof username == "undefined"){
-    document.getElementById("loginStatus").setAttribute("hidden",true);
+    document.getElementById("logoutButton").setAttribute("hidden",true);
   }
 
 
