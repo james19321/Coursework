@@ -1,36 +1,48 @@
-function pageLoad(token){
-    if(token==null){
-        document.getElementById('loginStatus').innerHTML;
-    }
+function pageLoad() {
 }
 
-function getCookie(cname){
-    var name= cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for (var i=0;i<ca.length;i++){
-        var c =ca[i];
-        while(c.charAt(0) == ''){
-            c=c.substring(1);
-        }
-        if(c.indexOf(name) == 0){
-            return c.substring(name.length,c.length);
-        }
-    }
-    return "";
-}
+function login(event) {
 
-function checkCookie() {
-    var cookie = getCookie("token");
-    if(username != ""){
-        alert("Welcome back");
-    }else{
-        document.getElementById('loginStatus').innerHTML = 'Not Logged In';
+    event.preventDefault();
+
+    const form = document.getElementById("loginForm");
+    const formData = new FormData(form);
+
+    fetch("/users/login", { method: 'POST', body: formData })
+        .then(response => response.json())
+.then(responseData => {
+
+        if (responseData.hasOwnProperty('error')) {
+        alert(responseData.error);
+    } else {
+        Cookies.set("username", responseData.username);
+        Cookies.set("token", responseData.token);
+
+        // window.location.href = '/client/index.html';
     }
 }
+).catch((error) => {
+        console.error('Error:', error);
+});
+}
 
-checkCookie('token');
+function logout() {
 
-const username=document.getElementById('username');
-const password=document.getElementById('password');
-const form=document.getElementById('form');
+    fetch("/users/logout", {method: 'POST'}
+    ).then(response => response.json()
+).then(responseData => {
+        if (responseData.hasOwnProperty('error')) {
+
+        alert(responseData.error);
+
+    } else {
+        console.log("hello world");
+        Cookies.remove("username");
+        Cookies.remove("token");
+
+        // window.location.href = '/client/index.html';
+
+    }
+});
+
+}

@@ -6,17 +6,20 @@
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script src="js/login.js"></script>
+        <script src="js/js.cookie.js"></script>
+        
+
     </head>
 
 
 
 <!-- body -->
-    <body onload="pageLoad()">
-
+    <body>
+        <div id="content">
         <!-- header code with website logo and login status etc. -->
         <div class="header">
             <div class="titleLogoContainer">
-                <a href="index2.html"><img id="titleLogo" src="img/libraryLogo.png" alt="titleLogo"></a>
+                <a href="index.html"><img id="titleLogo" src="img/libraryLogo.png" alt="titleLogo"></a>
             </div>
 
             <div class="websiteName">
@@ -24,13 +27,12 @@
             </div>
 
             <div class="loginCredentials">
-                <div id="error"></div>
-                <form action="/" method="GET">
+                <form id="loginForm">
                     <label for="username">Username:</label><br>
                     <input type="text" name="username" id="username"><br>
                     <label for="password">Password:<br></label>
                     <input type="text" name="password" id="password"><br>
-                    <button type="submit">Submit</button>
+                    <input type="submit" value="Submit" id="submit">
                 </form>
             </div>
 
@@ -51,6 +53,11 @@
             </div>
         </div>
         <!--  -->
+        </div>
 
+        <script>
+            const loginForm = document.querySelector("form#loginForm");
+            loginForm.addEventListener("submit", login);
+        </script>
     </body>
 </html>
